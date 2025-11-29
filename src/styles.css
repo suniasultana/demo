@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  padding: 1rem 1.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+  background: #020617;
+  border-bottom: 1px solid #1f2937;
+  padding: 0.75rem 1.5rem;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.search-form {
+  flex: 1;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.search-form input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.search-form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 999px;
+  background: #3b82f6;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background: #2563eb;
+}
+
+/* Page */
+
+.page {
+  margin-top: 1.5rem;
+}
+
+.page h1 {
+  margin-bottom: 0.5rem;
+}
+
+.subheading {
+  margin-bottom: 1rem;
+  color: #9ca3af;
+}
+
+/* Movies grid & cards */
+
+.movies-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.movie-card {
+  background: #020617;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid #1f2937;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border-color: #3b82f6;
+}
+
+.movie-card img {
+  width: 100%;
+  display: block;
+}
+
+.movie-card-placeholder {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111827;
+  color: #6b7280;
+}
+
+.movie-card-info {
+  padding: 0.5rem 0.75rem 0.75rem;
+}
+
+.movie-card-info h3 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.movie-card-info p {
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* Movie details */
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .movie-details {
+    flex-direction: row;
+  }
+}
+
+.movie-details-poster img {
+  max-width: 250px;
+  border-radius: 0.75rem;
+}
+
+.movie-details-content {
+  flex: 1;
+}
+
+.movie-meta {
+  color: #9ca3af;
+}
+
+/* Tabs */
+
+.tabs {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid #1f2937;
+}
+
+.tab {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 0.75rem 0.75rem 0 0;
+  border: 1px solid transparent;
+}
+
+.tab.active {
+  background: #111827;
+  border-color: #1f2937;
+  border-bottom-color: #111827;
+}
+
+.tab-content {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 0 0.75rem 0.75rem 0.75rem;
+  padding: 0.75rem 1rem;
+  margin-top: -1px;
+}
+
+/* Cast */
+
+.cast-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.cast-list li {
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #1f2937;
+  font-size: 0.9rem;
+}
+
+/* Reviews */
+
+.reviews-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.review-item {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #1f2937;
+}
+
+.review-author {
+  color: #9ca3af;
+  margin-bottom: 0.25rem;
+}
+
+/* Similar */
+
+.similar-section {
+  margin-top: 2rem;
+}
+
+/* General */
+
+.error {
+  color: #f97373;
+}
+
+.back-home-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #3b82f6;
+}
